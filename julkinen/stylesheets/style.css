@@ -1,0 +1,15 @@
+:root {
+    font-size: 16px;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    font-family: inherit;
+}
