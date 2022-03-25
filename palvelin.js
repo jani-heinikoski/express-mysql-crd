@@ -25,10 +25,10 @@ async function main() {
     app.use(express.json({ type: "application/json" }));
     // Kerrotaan expressille, että julkinen kansio sisältää staattisia resursseja
     // --> Express palvelee nämä automaattisesti
-    app.use(express.static(path.join(__dirname, "public")));
+    app.use(express.static(path.join(__dirname, "julkinen")));
     // Sisällytetään tekemämme pelaaja-reitti, josta saa pelaajat
     const pelaajaRouter = require("./reitit/pelaaja")(connection);
-    app.use(pelaajaRouter);
+    app.use("/api", pelaajaRouter);
     // Käynnistetään express palvelin .env tiedostossa annetussa portissa tai
     // portissa 3000, jos sitä ei ole määritetty
     app.listen(process.env.EXPRESS_SERVER_PORT || 3000);
