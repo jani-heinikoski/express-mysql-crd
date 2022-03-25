@@ -28,7 +28,7 @@ async function main() {
     app.use(express.static(path.join(__dirname, "julkinen")));
     // Sisällytetään tekemämme pelaaja-reitti, josta saa pelaajat
     const pelaajaRouter = require("./reitit/pelaaja")(connection);
-    app.use("/api", pelaajaRouter);
+    app.use("/api/pelaaja", pelaajaRouter);
     // Käynnistetään express palvelin .env tiedostossa annetussa portissa tai
     // portissa 3000, jos sitä ei ole määritetty
     app.listen(process.env.EXPRESS_SERVER_PORT || 3000);
