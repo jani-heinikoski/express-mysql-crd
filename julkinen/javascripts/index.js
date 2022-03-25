@@ -1,3 +1,10 @@
+/**
+ * Author: Jani Heinikoski
+ * Created: 25.03.2022
+ * Sources:
+ * https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+ * https://www.w3schools.com/js/js_htmldom_nodes.asp
+ */
 // Haetaan referenssit kaikkiin tarvittaviin DOM -elementteihin
 const lisaaPelaajaBtn = document.querySelector("#lisaa-pelaaja");
 const paivitaTaulukkoBtn = document.querySelector("#paivita-taulukko");

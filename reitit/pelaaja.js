@@ -1,3 +1,11 @@
+/**
+ * Author: Jani Heinikoski
+ * Created: 25.03.2022
+ * Sources:
+ * https://nodejs.org/en/
+ * https://expressjs.com/
+ * https://www.npmjs.com/package/mysql2
+ */
 module.exports = function (mysqlConnection) {
     const router = require("express").Router();
     // GET reitti päätepisteeseen /, käytetään pelaajien hakemiseen

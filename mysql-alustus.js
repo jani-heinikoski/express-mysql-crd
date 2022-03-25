@@ -1,3 +1,9 @@
+/**
+ * Author: Jani Heinikoski
+ * Created: 25.03.2022
+ * Sources:
+ * https://www.npmjs.com/package/mysql2
+ */
 module.exports = async function (mysqlConnection) {
     const CREATE_TABLE = `CREATE TABLE IF NOT EXISTS PELAAJA(
         PELAAJA_ID int not null primary key auto_increment,

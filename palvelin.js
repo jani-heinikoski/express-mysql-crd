@@ -1,3 +1,12 @@
+/**
+ * Author: Jani Heinikoski
+ * Created: 25.03.2022
+ * Sources:
+ * https://nodejs.org/en/
+ * https://expressjs.com/
+ * https://www.npmjs.com/package/mysql2
+ * https://www.npmjs.com/package/dotenv
+ */
 // Sisällytetään tarvittavat Node paketit
 const express = require("express");
 const mysql = require("mysql2/promise");
