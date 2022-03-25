@@ -8,5 +8,24 @@
         <script src="./javascripts/index.js" defer></script>
         <title>Käyttöliittymä</title>
     </head>
-    <body></body>
+    <body>
+        <header>
+            <h1>Pelaajien hallinta</h1>
+        </header>
+        <table id="pelaajat"></table>
+        <div id="lisaa-pelaaja-container">
+            <div>
+                <label for="nimi">Nimi:</label>
+                <input id="nimi" type="text" name="nimi" maxlength="40" />
+            </div>
+            <div>
+                <label for="seura">Seura:</label>
+                <input id="seura" type="text" name="seura" maxlength="20" />
+            </div>
+            <div>
+                <button id="lisaa-pelaaja">Lisää pelaaja</button>
+                <button id="paivita-taulukko">Päivitä taulukko</button>
+            </div>
+        </div>
+    </body>
 </html>
