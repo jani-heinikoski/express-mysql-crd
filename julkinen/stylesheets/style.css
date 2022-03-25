@@ -13,3 +13,56 @@ html {
     box-sizing: inherit;
     font-family: inherit;
 }
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: aquamarine;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td,
+table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+div#lisaa-pelaaja-container {
+    display: flex;
+    margin-top: 2rem;
+    flex-flow: column;
+    width: 100%;
+    align-items: center;
+}
+
+div#lisaa-pelaaja-container > div {
+    margin-top: 12px;
+    margin-left: 12px;
+    width: 25%;
+}
+
+div#lisaa-pelaaja-container > div > * {
+    width: 100%;
+}
+
+div#lisaa-pelaaja-container > div > button {
+    padding: 8px;
+    background-color: #ddd;
+}
+
+div#lisaa-pelaaja-container > div > button:hover {
+    background-color: aquamarine;
+}
