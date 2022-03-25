@@ -12,8 +12,11 @@ async function main() {
         port: process.env.MYSQL_PORT,
         user: process.env.MYSQL_USER,
         password: process.env.MYSQL_PWD,
+        database: "KISAT_DB",
     });
     console.log("Yhdistettiin tietokantaan onnistuneesti!");
+    // Alustetaan MySQL tietokanta (luodaan PELAAJA -taulu, mikäli ei ole olemassa)
+    require("./mysql-alustus")(connection);
     // Alustetaan express
     const app = express();
     // Pakotetaan HTTP pyyntöjen olevan JSON muodossa, mikäli ne ovat,
