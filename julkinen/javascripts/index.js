@@ -78,7 +78,7 @@ async function paivitaTaulukko() {
     pelaajatTbl.innerHTML = "";
     // Hakee kaikki pelaajat
     const pelaajat = await haeKaikkiPelaajat();
-    if (pelaajat instanceof Array) {
+    if (pelaajat) {
         // Lisää jokaisen pelaajan taulukkoon
         pelaajat.forEach((pelaaja) => {
             pelaajatTbl.appendChild(
@@ -93,6 +93,8 @@ async function paivitaTaulukko() {
 }
 // Tapahtumakäsittelijä "Lisää pelaaja" -painikkeelle
 lisaaPelaajaBtn.addEventListener("click", async (event) => {
+    // Input-elementin "value"-ominaisuus on käytännössä viittaus elementin
+    // tekstisisältöön.
     if (nimiInput.value.length > 0 && seuraInput.value.length > 0) {
         // Jos pelaajan lisääminen onnistuu, niin päivitetään taulukko
         if (await lisaaPelaaja(nimiInput.value, seuraInput.value)) {
