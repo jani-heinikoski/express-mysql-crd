@@ -1,6 +1,6 @@
 # Express + MySQL REST API
 
-Yksinkertainen demonstraatio REST-rajapinnan luomisesta Node + Express -teknologiapinolla hyödyntäen MySQL tietokantaa datan tallettamiseen.
+Yksinkertainen demonstraatio REST-rajapinnan, sekä yksinkertaisen HTML + CSS + Vanilla JavaScript käyttöliittymän luomisesta Node + Express -teknologiapinolla hyödyntäen MySQL tietokantaa datan tallettamiseen.
 
 
 
