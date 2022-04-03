@@ -8,6 +8,7 @@
 // Haetaan referenssit kaikkiin tarvittaviin DOM -elementteihin
 const lisaaPelaajaBtn = document.querySelector("#lisaa-pelaaja");
 const paivitaTaulukkoBtn = document.querySelector("#paivita-taulukko");
+const poistaPelaajatBtn = document.querySelector("#poista-pelaajat");
 const pelaajatTbl = document.querySelector("#pelaajat");
 const nimiInput = document.querySelector("#nimi");
 const seuraInput = document.querySelector("#seura");
@@ -63,25 +64,47 @@ async function lisaaPelaaja(nimi, seura) {
                 },
             }),
         });
+        // Palauttaa boolean arvon, oliko palvelimen vastauksen HTTP
+        // statuskoodi OK, eli välillä [200, 299].
         return serverResponse.ok;
     } catch (err) {
         console.error(err);
     }
     return false;
 }
-// Päivittää pelaajataulukon dynaamisesti ensin tyhjentämällä sen
+// Lähettää palvelimelle pyynnön poistaa kaikki pelaajat tietokannasta
+async function poistaPelaajat() {
+    try {
+        let serverResponse = await fetch("http://localhost:3000/api/pelaaja/", {
+            method: "DELETE",
+        });
+        return serverResponse.ok;
+    } catch (err) {
+        console.error(err);
+    }
+    return false;
+}
+// Päivittää pelaajataulukon dynaamisesti ensin tyhjentämällä sen,
 // ja sitten hakee palvelimelta kaikki pelaajat ja lisää ne taulukkoon.
 // Huom. tämä on kohtuullisen epätehokas lähestymistapa, mutta menkööt yksinkertaisen
 // esimerkin puitteissa.
 async function paivitaTaulukko() {
-    // Tyhjentää taulukon
-    pelaajatTbl.innerHTML = "";
+    // Tyhjentää taulukon, mutta jättää taulun headerin
+    pelaajatTbl.innerHTML = `
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nimi</th>
+            <th>Seura</th>
+        </tr>
+    </thead>`;
     // Hakee kaikki pelaajat
     const pelaajat = await haeKaikkiPelaajat();
     if (pelaajat) {
         // Lisää jokaisen pelaajan taulukkoon
+        let tableBody = document.createElement("tbody");
         pelaajat.forEach((pelaaja) => {
-            pelaajatTbl.appendChild(
+            tableBody.appendChild(
                 luoPelaajaDOMElementti(
                     pelaaja.PELAAJA_ID,
                     pelaaja.PELAAJA_NIMI,
@@ -89,6 +112,7 @@ async function paivitaTaulukko() {
                 )
             );
         });
+        pelaajatTbl.appendChild(tableBody);
     }
 }
 // Tapahtumakäsittelijä "Lisää pelaaja" -painikkeelle
@@ -110,3 +134,12 @@ lisaaPelaajaBtn.addEventListener("click", async (event) => {
 paivitaTaulukkoBtn.addEventListener("click", async (event) => {
     await paivitaTaulukko();
 });
+// Tapahtumakäsittelijä "Poista pelaajat" -painikkeelle
+poistaPelaajatBtn.addEventListener("click", async (event) => {
+    if (!(await poistaPelaajat())) {
+        alert("Jotain meni vikaan poistettaessa pelaajia!");
+    }
+    await paivitaTaulukko();
+});
+
+paivitaTaulukko();
