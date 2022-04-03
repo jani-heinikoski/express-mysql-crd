@@ -77,11 +77,11 @@ Yhdistettiin tietokantaan onnistuneesti!
 
 
 
-## Authors
+## Tekijät
 
 - [@jani-heinikoski](https://www.github.com/jani-heinikoski)
 
 
-## License
+## Lisenssi
 
 [ISC](https://choosealicense.com/licenses/isc/)
