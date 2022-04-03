@@ -60,6 +60,7 @@ div#lisaa-pelaaja-container > div > * {
 
 div#lisaa-pelaaja-container > div > button {
     padding: 8px;
+    margin-top: 8px;
     background-color: #ddd;
 }
 
