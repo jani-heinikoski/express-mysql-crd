@@ -42,9 +42,9 @@ sinun MySQL tietokantapalvelimesi asetuksilla.
   POST /api/pelaaja
 ```
 
-| Parameter | Type     | Description                       |
+| Body | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `pelaaja`      | `object` | **Pakollinen**. Uusi pelaaja, ks. muoto alla. |
+| `pelaaja`      | `JSON-object` | **Pakollinen**. Uusi pelaaja, ks. muoto alla. |
 
 ```json
 "pelaaja": {
