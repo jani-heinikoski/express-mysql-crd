@@ -6,7 +6,7 @@ Yksinkertainen demonstraatio REST-rajapinnan, sekä yksinkertaisen HTML + CSS + 
 
 ## Asennus
 
-Lataa koodirepositoryn sisältö haluamaasi hakemistoon.
+Lataa koodirepositoryn sisältö haluamaasi hakemistoon (saatavilla ZIP-pakettina https://github.com/jani-heinikoski/express-mysql-crud/archive/refs/heads/main.zip).
 
 Asenna Node.js laitteellesi
 (testattu versiolla v17.6.0, saatavilla https://nodejs.org/dist/v17.6.0/)
