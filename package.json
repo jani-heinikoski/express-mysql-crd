@@ -1,21 +1,21 @@
 {
-    "name": "express-mysql-crud",
+    "name": "express-mysql-crd",
     "version": "1.0.0",
-    "description": "Yksinkertainen demonstraatio REST-rajapinnan luomisesta Node + Express -teknologiapinolla hyödyntäen MySQL tietokantaa datan tallettamiseen.",
+    "description": "Yksinkertainen demo REST-rajapinnan luomisesta Node + Express + MySQL -teknologiapinolla.",
     "main": "palvelin.js",
     "scripts": {
         "start": "node palvelin.js"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/jani-heinikoski/express-mysql-crud.git"
+        "url": "git+https://github.com/jani-heinikoski/express-mysql-crd.git"
     },
     "author": "Jani Heinikoski",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/jani-heinikoski/express-mysql-crud/issues"
+        "url": "https://github.com/jani-heinikoski/express-mysql-crd/issues"
     },
-    "homepage": "https://github.com/jani-heinikoski/express-mysql-crud#readme",
+    "homepage": "https://github.com/jani-heinikoski/express-mysql-crd#readme",
     "dependencies": {
         "dotenv": "^16.0.0",
         "express": "^4.17.3",
