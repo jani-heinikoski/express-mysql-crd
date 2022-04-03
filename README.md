@@ -26,7 +26,12 @@ Avaa se haluamallasi tekstieditorilla, ja kopioi tiedoston
 **.env-example** sisältö siihen. Korvaa esimerkkitiedoston arvot
 sinun MySQL tietokantapalvelimesi asetuksilla.
 
+Avaa komentotulkki, ja käynnistä Express-palvelin seuraavilla komennoilla
 
+```cmd
+  cd <korvaa-projektin-polulla>
+  npm start
+```
 
 ## Rajapinnan HTTP päätepisteet
 
