@@ -58,9 +58,9 @@ Yhdistettiin tietokantaan onnistuneesti!
   POST /api/pelaaja
 ```
 
-| Body | Type     | Description                       |
+| Body | Tyyppi     | Kuvaus                       |
 | :-------- | :------- | :-------------------------------- |
-| `pelaaja`      | `JSON-object` | **Pakollinen**. Uusi pelaaja, ks. muoto alla. |
+| `pelaaja`      | `JSON-objekti` | **Pakollinen**. Uusi pelaaja, ks. muoto alla. |
 
 ```json
 "pelaaja": {
