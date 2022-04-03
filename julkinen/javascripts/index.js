@@ -35,12 +35,15 @@ function luoPelaajaDOMElementti(id, nimi, seura) {
 async function haeKaikkiPelaajat() {
     let serverResponse = null;
     try {
-        serverResponse = await fetch("http://localhost:3000/api/pelaaja/", {
-            method: "GET",
-            headers: {
-                Accept: "application/json",
-            },
-        });
+        serverResponse = await fetch(
+            location.protocol + "//" + location.host + "/api/pelaaja/",
+            {
+                method: "GET",
+                headers: {
+                    Accept: "application/json",
+                },
+            }
+        );
         if (serverResponse.ok) {
             return (await serverResponse.json()).pelaajat;
         }
@@ -52,18 +55,21 @@ async function haeKaikkiPelaajat() {
 // Lähettää uuden pelaajan palvelimelle lisättäväksi
 async function lisaaPelaaja(nimi, seura) {
     try {
-        let serverResponse = await fetch("http://localhost:3000/api/pelaaja/", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                pelaaja: {
-                    PELAAJA_NIMI: nimi,
-                    PELAAJA_SEURA: seura,
+        let serverResponse = await fetch(
+            location.protocol + "//" + location.host + "/api/pelaaja/",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
                 },
-            }),
-        });
+                body: JSON.stringify({
+                    pelaaja: {
+                        PELAAJA_NIMI: nimi,
+                        PELAAJA_SEURA: seura,
+                    },
+                }),
+            }
+        );
         // Palauttaa boolean arvon, oliko palvelimen vastauksen HTTP
         // statuskoodi OK, eli välillä [200, 299].
         return serverResponse.ok;
@@ -75,9 +81,12 @@ async function lisaaPelaaja(nimi, seura) {
 // Lähettää palvelimelle pyynnön poistaa kaikki pelaajat tietokannasta
 async function poistaPelaajat() {
     try {
-        let serverResponse = await fetch("http://localhost:3000/api/pelaaja/", {
-            method: "DELETE",
-        });
+        let serverResponse = await fetch(
+            location.protocol + "//" + location.host + "/api/pelaaja/",
+            {
+                method: "DELETE",
+            }
+        );
         return serverResponse.ok;
     } catch (err) {
         console.error(err);
