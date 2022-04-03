@@ -33,6 +33,17 @@ Avaa komentotulkki, ja käynnistä Express-palvelin seuraavilla komennoilla
   npm start
 ```
 
+Mikäli käynnistys onnistui, niin sinun tulisi saada seuraava tuloste komentotulkkiin
+
+```cmd
+~\express-mysql-crud>npm start
+
+> express-mysql-crud@1.0.0 start
+> node palvelin.js
+
+Yhdistettiin tietokantaan onnistuneesti!
+```
+
 ## Rajapinnan HTTP päätepisteet
 
 #### Hae kaikki pelaajat
@@ -69,4 +80,8 @@ Avaa komentotulkki, ja käynnistä Express-palvelin seuraavilla komennoilla
 ## Authors
 
 - [@jani-heinikoski](https://www.github.com/jani-heinikoski)
-    
+
+
+## License
+
+[ISC](https://choosealicense.com/licenses/isc/)
