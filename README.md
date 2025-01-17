@@ -1,6 +1,6 @@
 # Express + MySQL REST API
 
-Yksinkertainen demonstraatio REST-rajapinnan, sekä yksinkertaisen HTML + CSS + Vanilla JavaScript käyttöliittymän luomisesta Node + Express + MySQL -teknologiapinolla.
+Yksinkertainen demonstraatio REST-rajapinnan, sekä yksinkertaisen HTML + CSS + Vanilla JavaScript käyttöliittymän luomisesta Node + Express + MySQL -teknologiapinolla. Tämä projekti on tarkoitettu aiheesta kiinnostuneille ja aloittelijoille oppimistarkoitusta varten. Kommentointi on tarkoituksellisesti ylenpalttista, jotta useissa tutoriaaleissa esiintyvät asiat tulisivat ymmärretyksi.
 
 
 
